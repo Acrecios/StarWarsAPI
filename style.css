@@ -1,0 +1,195 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: Helevtica, Arial, sans-serif;
+  line-height: 1.618;
+  color: #ccc;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 100%;
+  background-image: url(background.gif);
+  background-attachment: fixed;
+}
+
+a,
+a:link,
+a:hover,
+a:visited {
+  color: #ff0000;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 100;
+}
+
+button {
+  color: #e87070;
+  background-color: #000;
+  border: 1px solid #e87070;
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+}
+
+header,
+footer {
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid #e8e770;
+}
+
+body>header,
+body>footer {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+body>header,
+body>footer {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+
+main {
+  flex-grow: 2;
+  overflow: auto;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+body>footer {
+  border-top: 1px solid #e8e770;
+}
+
+.cards>section {
+  width: calc(50% - 2rem);
+  margin: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid #e8e770;
+  border-radius: 3px;
+}
+
+
+.cards>section>header,
+.cards>section>div,
+.planet>header,
+.planet>div {
+  padding: 0 1rem;
+}
+
+.cards>section>header,
+.planet>header {
+  border-bottom: 1px solid #e8e770;
+}
+/*
+.cards>section ul {
+  padding: 0;
+}
+
+.cards>section li {
+  display: flex;
+  padding: 0.2rem 0;
+}
+
+.cards>section .label {
+  flex-grow: 0;
+  width: 30%;
+}
+*/
+.cards>section .gender {
+  color: #1c3952;
+}
+/*
+.cards>section .value {
+  color: #7ba5ca;
+}
+*/
+section ul {
+  padding: 0;
+}
+
+section li {
+  display: flex;
+  padding: 0.2rem 0;
+}
+
+section .label {
+  flex-grow: 0;
+  width: 30%;
+}
+
+section .value {
+  color: #7ba5ca;
+}
+
+/* -------------------------------- */
+
+.modal,
+.modal>.underlay,
+.modal>.body {
+  position: absolute;
+}
+
+.modal,
+.modal>.underlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal {
+  height: 0;
+  z-index: 10;
+  overflow: hidden;
+  transition: height 300ms ease;
+}
+
+.modal.open {
+  height: 100%;
+}
+
+.modal>.underlay {
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.modal>.body {
+  z-index: 20;
+  top: 3em;
+  right: 3em;
+  bottom: 3em;
+  left: 3em;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal .controls {
+  text-align: right;
+  padding: 0.2em 0.4em;
+}
+
+.modal .content {
+  flex-grow: 1;
+  background-color: #000;
+  box-shadow: 0 4px 8px 0 #000;
+  border-radius: 3px;
+  overflow: auto;
+}
